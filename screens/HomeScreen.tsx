@@ -1,29 +1,26 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
-export default function CardComponent() {
+export default function HomeScreen() {
   return (
-    <View style={styles.card}>
-      <Text style={styles.title}>Sample Card</Text>
-      <Text>This is a basic! card component with shadow effects</Text>
+    <View style={styles.container}>
+      <Image
+        source={require('../assets/logos/THE_SELFCARE_SPACE_STACKED_CHOCOLATE.png')}
+        style={styles.logo}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: 'white',
-    borderRadius: 8,
-    padding: 16,
-    margin: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+  container: {
+    flex: 1,
+    backgroundColor: '#DED0C0',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 8,
+  logo: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
   },
 });

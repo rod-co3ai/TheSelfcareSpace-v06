@@ -1,5 +1,4 @@
-
-  import { registerRootComponent } from 'expo';
+import { registerRootComponent } from 'expo';
 
 import App from './App';
 
@@ -8,4 +7,5 @@ import App from './App';
 // the environment is set up appropriately
 registerRootComponent(App);
 
-  
+// Also export App as default for web bundler
+export default App;
