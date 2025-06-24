@@ -1,26 +1,27 @@
-import { View, Image, StyleSheet } from 'react-native';
+import React from 'react';
+import { SafeAreaView, Image, StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Image
-        source={require('../assets/logos/THE_SELFCARE_SPACE_STACKED_CHOCOLATE.png')}
+        source={require('../assets/logos/logo.png')}
         style={styles.logo}
+        resizeMode="contain"
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#DED0C0',
+    backgroundColor: '#F7F4F2', // Calming light neutral
     alignItems: 'center',
     justifyContent: 'center',
   },
   logo: {
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
+    width: 240,
+    height: 120,
   },
 });
